@@ -1,4 +1,4 @@
-function [x, val] = regularizes_sle(A, b)
+function [x, val] = regularized_ls(A, b)
 	% Solves an optimization problem
 	% min. ||x||_1
 	% s.t.

@@ -7,7 +7,14 @@ function [x, val] = regularizes_sle(A, b)
 	% where ||x||_1 is the 1 norm of the vector x.
 	% 
 
+	if (~isvector(b))
+		error('b must be a vector.')
+	end
 	[m, n] = size(A);
+	if (m ~= length(b))
+		error('The length of the vector b must match the number of rows in the matrix A.');
+	end
+
 	Anew = [A, -A];
 	f = ones(2 * n, 1);
 	lb = zeros(2 * n, 1);

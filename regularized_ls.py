@@ -13,6 +13,7 @@ def regularized_ls(A, b):
     prob = pulp.LpProblem("Linear System", pulp.LpMinimize)
     pos_vars = pulp.LpVariable.dicts("Positive", range(n), 0)
     neg_vars = pulp.LpVariable.dicts("Negative", range(n), 0)
+    prob += pulp.lpSum(pos_vars[i] for i in range(n)) + pulp.lpSum(neg_vars[i] for i in range(n))
     for eq in range(m):
         prob += pulp.lpSum((pos_vars[i] - neg_vars[i]) * A[eq][i] for i in range(n)) == b[eq]
 

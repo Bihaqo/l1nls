@@ -17,6 +17,7 @@ def min_norm_lin_solve(A, b):
     for eq in range(m):
         prob += pulp.lpSum((pos_vars[i] - neg_vars[i]) * A[eq][i] for i in range(n)) == b[eq]
 
-    val = prob.solve()
+    prob.solve()
     x = [pulp.value(pos_vars[i]) - pulp.value(neg_vars[i]) for i in range(n)]
+    val = pulp.value(prob.objective)
     return (x, val)

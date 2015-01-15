@@ -1,11 +1,11 @@
-function [x, val] = regularized_ls(A, b)
+function [x, val] = min_norm_lin_solve(A, b)
 	% Solves an optimization problem
 	% min. ||x||_1
 	% s.t.
 	% A x = b
-	% 
+	%
 	% where ||x||_1 is the 1 norm of the vector x.
-	% 
+	%
 
 	if (~isvector(b))
 		error('b must be a vector.')

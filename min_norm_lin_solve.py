@@ -1,7 +1,7 @@
 import pulp
 
-def regularized_ls(A, b):
-    """Solve system of linear equations regularized by the 1-norm.
+def min_norm_lin_solve(A, b):
+    """Find the solution of system of linear equations with minimal 1-norm.
 
     Solves an optimization problem
     min. ||x||_1

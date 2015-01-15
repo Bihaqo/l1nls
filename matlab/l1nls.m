@@ -1,4 +1,4 @@
-function [x, val] = min_norm_lin_solve(A, b)
+function [x, val] = l1nls(A, b)
 	% Solves an optimization problem
 	% min. ||x||_1
 	% s.t.

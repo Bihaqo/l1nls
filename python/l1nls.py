@@ -1,6 +1,7 @@
 import pulp
 
-def min_norm_lin_solve(A, b):
+
+def l1nls(A, b):
     """Find the solution of system of linear equations with minimal 1-norm.
 
     Solves an optimization problem

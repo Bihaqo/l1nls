@@ -1,5 +1,5 @@
-Matlab and Python solvers that find the solution of the system of linear equations
-with the minimal 1-norm, i.e. solving the following optimization problem:
+Matlab and Python solvers that find the least 1-norm solution of the system of
+linear equations, i.e. solve the following optimization problem:
 ```
 min. ||x||_1
 s.t.

@@ -2,7 +2,7 @@ import pulp
 
 
 def l1nls(A, b):
-    """Find the solution of system of linear equations with minimal 1-norm.
+    """Find the least 1-norm solution of system of linear equations.
 
     Solves an optimization problem
     min. ||x||_1
